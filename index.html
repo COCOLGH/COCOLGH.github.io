@@ -1,0 +1,48 @@
+---
+
+title: index
+layout: index
+
+---
+
+<!-- 遍历博客文章 -->
+{% for post in paginator.posts %}
+<section class="probootstrap-section-half d-md-flex" id="section-about">
+	<div class="article">
+		<div class="articleContent">
+			<h2>{{ post.title }}</h2>
+			<p>{{post.excerpt}}</p>
+
+			<ul class="articleInfo">
+
+				<li class="publicTime">{{post.date | date: '%Y-%m-%d %H:%M:%S  +8000'}}</li>
+				<li> | </li>
+				<li>阅读数7</li>
+				<li> | </li>
+				<li>评论数6</li>
+				<li class="Rmore"><a href="{{ post.url }}">了解更多</a></li>
+			</ul>
+			<!-- <div style="clear:both"></div> -->
+		</div><!--articleContent end-->
+
+	</div>
+</section>
+{% endfor %}
+
+
+<!-- 判断点击上一页和下一页时，是否跳转 -->
+<section>
+	<div class="page">
+		{% if paginator.previous_page_path %}
+			<a href="{{ paginator.previous_page_path }}"> 上一页 </a>
+		{% else %}
+			<a href="javascript:void(0);"> 上一页 </a>
+		{% endif %}
+
+         {% if paginator.next_page_path %}
+         	<a href="{{ paginator.next_page_path }}"> 下一页 </a>
+         {% else %}
+         	<a href="javascript:void(0);"> 下一页 </a>
+         {% endif %}
+     </div>
+</section>
