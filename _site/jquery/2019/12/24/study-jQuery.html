@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/animate.css">
+    <link rel="stylesheet" href="/public/css/content.css">
+    <title>content</title>
+</head>
+
+<body>
+    <div id="container" class="wrap row">
+
+        <div class="sidebar">
+            <div class="sidebar-container">
+                <div class="img">
+                    <!-- <img src="/public/images/ningM.jpg" alt=""> -->
+                    <div class="parent">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="sidebar-about">
+                    <h2><a href="/index.html">COCOL</a></h2>
+                    <p>I live in the world, just want to understand some truth, meet some interesting things.</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a class="sidebar-nav-item animated active" href="/index.html">首页</a>
+                    <a class="sidebar-nav-item animated" href="#">相关文章</a>
+                    <a class="sidebar-nav-item animated" href="#">友情链接</a>
+                    <a class="sidebar-nav-item animated" href="#">推荐内容</a>
+                </nav>
+                <p class="contact-info">联系方式：1772527953@qq.com</p>
+            </div>
+        </div>
+        <div class="myContent">
+            <div class="content-container">
+                <h2 class="animated wobble">jquery选择器</h2>
+                <div class="contMsg">
+                    <ul class="Msg">
+                        <li class="original">原创</li>
+                        <li>发布于2019-12-24 07:12:21 +0800 </li>
+                        
+                        <li class="belongTo">jquery</li>
+                        
+                    </ul>
+                </div>
+                <div class="cont">
+                    <p>选择器	实例	 选取</p>
+<ul>
+  <li>$(“*”)	所有元素
+#id	$(“#lastname”)	id=”lastname” 的元素
+.class	$(“.intro”)	所有 class=”intro” 的元素
+element	$(“p”)	所有 p 元素
+.class.class	$(“.intro.demo”)	所有 class=”intro” 且 class=”demo” 的元素</li>
+</ul>
+
+<p>:first	$(“p:first”)	第一个 p 元素
+:last	$(“p:last”)	最后一个  元素
+:even	$(“tr:even”)	所有偶数 tr 元素
+:odd	$(“tr:odd”)	所有奇数 tr 元素</p>
+
+<p>:eq(index)	$(“ul li:eq(3)”)	列表中的第四个元素（index 从 0 开始）
+:gt(no)	$(“ul li:gt(3)”)	列出 index 大于 3 的元素
+:lt(no)	$(“ul li:lt(3)”)	列出 index 小于 3 的元素
+:not(selector)	$(“input:not(:empty)”)	所有不为空的 input 元素</p>
+
+<p>:header	$(“:header”)	所有标题元素 h1 - h6
+:animated	 	所有动画元素</p>
+
+<p>:contains(text)	$(“:contains(‘W3School’)”)	包含指定字符串的所有元素
+:empty	$(“:empty”)	无子（元素）节点的所有元素
+:hidden	$(“p:hidden”)	所有隐藏的 p 元素
+:visible	$(“table:visible”)	所有可见的表格</p>
+
+<p>s1,s2,s3	$(“th,td,.intro”)	所有带有匹配选择的元素</p>
+
+<p>[attribute]	$(“[href]”)	所有带有 href 属性的元素
+[attribute=value]	$(“[href=’#’]”)	所有 href 属性的值等于 “#” 的元素
+[attribute!=value]	$(“[href!=’#’]”)	所有 href 属性的值不等于 “#” 的元素
+[attribute$=value]	$(“[href$=’.jpg’]”)	所有 href 属性的值包含以 “.jpg” 结尾的元素</p>
+
+<p>:input	$(“:input”)	所有 input&gt;元素
+:text	$(“:text”)	所有 type=”text” 的 input元素
+:password	$(“:password”)	所有 type=”password” 的 input 元素
+:radio	$(“:radio”)	所有 type=”radio” 的 input 元素
+:checkbox	$(“:checkbox”)	所有 type=”checkbox” 的 input 元素
+:submit	$(“:submit”)	所有 type=”submit” 的 input 元素
+:reset	$(“:reset”)	所有 type=”reset” 的 input 元素
+:button	$(“:button”)	所有 type=”button” 的 input 元素
+:image	$(“:image”)	所有 type=”image” 的 input 元素
+:file	$(“:file”)	所有 type=”file” 的 input 元素</p>
+
+<p>:enabled	$(“:enabled”)	所有激活的 input 元素
+:disabled	$(“:disabled”)	所有禁用的 input 元素
+:selected	$(“:selected”)	所有被选取的 input 元素
+:checked	$(“:checked”)	所有被选中的 input 元素</p>
+
+                </div>
+                <div class="toolbox">
+                    <ul>
+                        <li class="toolList"><span class="glyphicon glyphicon-thumbs-up">点赞</span>
+                        </li>
+                        <li class="toolList"><span class="glyphicon glyphicon-star-empty">收藏</span></li>
+                        <li class="toolList"><span class="glyphicon glyphicon-share-alt">分享</span></li>
+                        <li class="toolList"><span class="glyphicon glyphicon-eye-open">浏览量7</span></li>
+                    </ul>
+                </div>
+                <div class="commentbox">
+                    <textarea cols="80" rows="50" placeholder="来说几句吧......" class="mytextarea" id="content"></textarea>
+                    <div class="btn btn-info pull-right" id="comment">评论</div>
+                </div>
+                <div class="comment-list"></div>
+                <div class="choosePage">
+                    <ul class="prePage">
+                        
+                        <span class="glyphicon glyphicon-arrow-left"></span><a href="/javascript/2019/12/24/javascript.html">上一篇</a>
+                        
+
+                    </ul>
+                    <ul class="nextPage">
+
+                        
+                        <a href="/zawen/2019/12/24/first.html">下一篇</a><span class="glyphicon glyphicon-arrow-right"></span>
+                        
+                    </ul>
+                </div>
+            </div>
+            <a class="backTop" href="#"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        </div>
+
+
+        <!-- 菜单小图标 -->
+        <a href="#" id="color-bar">  
+            <div id="bar"></div>
+        </a>
+        <!-- 改变颜色 -->
+        <div class="color">
+            <div class="color-container">
+                <p>Choose your color</p>
+                <ul class="color-list">
+                    <li class="colorBox_1" onclick="choose(1)"></li>
+                    <li class="colorBox_2" onclick="choose(2)"></li>
+                    <li class="colorBox_3" onclick="choose(3)"></li>
+                    <li class="colorBox_4" onclick="choose(4)"></li>
+                    <li class="colorBox_5" onclick="choose(5)"></li>
+                    <li class="colorBox_6" onclick="choose(6)"></li>
+                </ul>
+                <p>Leave your footprints</p>
+            </div><!-- color-container end-->
+        </div><!-- color end-->
+
+    </div>
+    
+    
+
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script src="/public/js/jquery.comment.js"></script>
+    <script src="/public/js/content.js"></script>
+
+</body>
+</html>

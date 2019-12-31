@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Home</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
+
+  <link rel="stylesheet" href="/public/assets/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="/public/assets/css/animate.css">
+  <link rel="stylesheet" href="/public/assets/fonts/ionicons/css/ionicons.min.css">
+
+  <link rel="stylesheet" href="/public/assets/fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/assets/css/slick.css">
+  <link rel="stylesheet" href="/public/assets/css/slick-theme.css">
+
+  <link rel="stylesheet" href="/public/assets/css/helpers.css">
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+
+  <link rel="stylesheet" href="/public/assets/css/myCss.css">
+
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar probootstrap_scrolled-light" id="probootstrap-navbar">
+    <div class="container">
+      <img src="/public/assets/images/black-lab-glass.ico" alt="ioc">&nbsp;&nbsp;&nbsp;
+      <a class="navbar-brand" href="#">COCOL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="ion-navicon"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="probootstrap-menu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="#">首页</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-feature">分类</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-about">文章列表</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Contact">联系</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+  <section class="probootstrap_cover_v3 overflow-hidden relative text-center" id="section-home" style="background:url(/public/assets/images/1481081724598.jpg) no-repeat 50% 50%;">
+    <div class="overlay"></div>
+    <a class="ytp_player" data-property="{videoURL:'',containment:'#section-home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:40, opacity:1, quality:'default'}"></a> 
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md info">
+            <div class="touXiang">
+              <img src="/public/assets/images/touxiang.jpg" alt="pic">
+            </div>
+            <span>一个行走在学习路上的“程序媛”</span>
+            <div id="textInput"></div>
+
+          </div> 
+        </div>
+      </div>
+      <div class="scroll-wrap js-scroll-wrap probootstrap-animate">
+        <a href="#section-feature" class="text-white probootstrap_font-24 smoothscroll"><i class="ion-chevron-down"></i></a>
+      </div>
+    </section>
+    <!-- END section -->
+    
+
+    <section class="probootstrap_section" id="section-feature">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6 text-center mb-5 probootstrap-animate">
+            <h2>文章分类</h2>
+          </div>
+        </div>
+        <div class="row">
+          {% for category in site.categories  %}
+          <div class="col-md-3 col-sm-6 probootstrap-animate">
+            <div class="media d-block text-center probootstrap-media">
+              <img class="mr-0 mb-3 w-50 img-fluid rounded-circle" src="/public/assets/images/{{ category | first }}.jpg" alt="Generic placeholder image">
+              <div class="media-body">
+                  <h5 class="mt-3">{{ category | first }}</h5>
+                  {% for post in category.last %}
+                  <a class="probootstrap_font-14" href="{{ post.url }}"> {{post.title}}</a> <br>
+                  {% endfor %}
+                  <p class="read-more"><a href="#"><span class="ion-ios-arrow-thin-right probootstrap_font-30"></span></a></p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    <!-- END section -->
+      
+      <!-- 文章内容 -->
+     <h2 style="text-align: center;">文章列表</h2> 
+     <span class="ArticleNum">文章数量： {{ site.posts | size }}</span>
+    {{content}}
+
+    <section>
+        <div class="page">
+          <!-- <a href="#">上一页</a>
+          <a href="#">下一页</a> -->
+        </div>
+    </section>
+
+    <footer>
+      <div class="footer-container row">
+        <div id="Contact">
+            <p>COCOL &nbsp;&nbsp;&nbsp;&nbsp; 联系方式：1772527953@qq.com &nbsp;&nbsp;&nbsp;&nbsp; 2019-12-27</p>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="/public/assets/js/jquery.min.js"></script>
+    
+    <script src="/public/assets/js/popper.min.js"></script>
+    <script src="/public/assets/js/bootstrap.min.js"></script>
+    <script src="/public/assets/js/slick.min.js"></script>
+    <script src="/public/assets/js/jquery.mb.YTPlayer.min.js"></script>
+
+    <script src="/public/assets/js/jquery.waypoints.min.js"></script>
+    <script src="/public/assets/js/jquery.easing.1.3.js"></script>
+
+    <script src="/public/assets/js/main.js"></script>
+
+    <script src="/public/assets/js/myJs.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/animate.css">
+    <link rel="stylesheet" href="/public/css/content.css">
+    <title>content</title>
+</head>
+
+<body>
+    <div id="container" class="wrap row">
+
+        <div class="sidebar">
+            <div class="sidebar-container">
+                <div class="img">
+                    <!-- <img src="/public/images/ningM.jpg" alt=""> -->
+                    <div class="parent">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="sidebar-about">
+                    <h2><a href="/index.html">COCOL</a></h2>
+                    <p>I live in the world, just want to understand some truth, meet some interesting things.</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a class="sidebar-nav-item animated active" href="/index.html">首页</a>
+                    <a class="sidebar-nav-item animated" href="#">相关文章</a>
+                    <a class="sidebar-nav-item animated" href="#">友情链接</a>
+                    <a class="sidebar-nav-item animated" href="#">推荐内容</a>
+                </nav>
+                <p class="contact-info">联系方式：1772527953@qq.com</p>
+            </div>
+        </div>
+        <div class="myContent">
+            <div class="content-container">
+                <h2 class="animated wobble">How Blazor Is Going to Change Web Development</h2>
+                <div class="contMsg">
+                    <ul class="Msg">
+                        <li class="original">原创</li>
+                        <li>发布于2019-12-28 16:52:31 +0800 </li>
+                        
+                        <li class="belongTo">literature</li>
+                        
+                    </ul>
+                </div>
+                <div class="cont">
+                    <p>jeremycmorgan profile image Jeremy Morgan   Dec 28 ・5 min read</p>
+
+<p>#programming # webdev #javascript #beginners</p>
+
+<p>Note: Do you live in the Portland, Oregon area? Want to learn about Blazor? Come see me January 7th! I’ll be presenting about Blazor at PADNUG.</p>
+
+<p>A couple of weeks ago I wrote an article about building and deploying a Blazor app without touching a Windows machine and realized maybe I should take a step back and explain what Blazor is and why anyone would use it. It’s still fairly new to most in the front end development world, but it’s awesome and you should check it out.</p>
+
+<p>So what is it, exactly?
+Blazor is a framework from Microsoft that you can use to develop interactive client-side Web UIs with C#.</p>
+
+<p>In their own words:</p>
+
+<p>Blazor lets you build interactive web UIs using C# instead of JavaScript. Blazor apps are composed of reusable web UI components implemented using C#, HTML, and CSS. Both client and server code is written in C#, allowing you to share code and libraries.</p>
+
+<p>Pretty cool right? You can download it here and get started.</p>
+
+<p>The old way
+Remember the old way of developing web applications?</p>
+
+<p>What is Blazor</p>
+
+<p>For the longest time, we built applications that ran solely on the server, using things like ASP.NET, PHP, etc and they generated an HTML file to be pushed to the browser.</p>
+
+<p>We’ve always had some bit of interactivity with JavaScript and AJAX but for many years most of the business logic is handled on the server itself, spitting out HTML pages to interact. The browser for many years was just a glorified document viewer. It worked, but we knew we could do better.</p>
+
+<p>There are some downsides to this pattern that we’re all aware of:</p>
+
+<p>The server needs to be configured with software to run the web app. ASP.NET, PHP, etc. Backend processors or runtimes have to exist on the server. 
+Most of the processing power is on the server. 
+Page loads are annoying and slow. 
+So we found a new answer to it.</p>
+
+<p>How we do it now
+With the rise of the Single Page Applications we have a new pattern, with frameworks like Angular, React and Vue:</p>
+
+<p>What is Blazor</p>
+
+<p>Now we’re building full applications in JavaScript that run on the browser. This splits the business logic, so that some runs on the browser, and some runs on the server. JavaScript applications run client-side and use messaging to communicate with the “server”. You can easily replace “server” with a service or application in the cloud, but the model is still the same.</p>
+
+<p>This is an excellent improvement on what we had before, which essentially manipulating HTML and tossing it back and forth. Now we have real applications running in the browser, and page loads are mostly a thing of the past.</p>
+
+<p>But Blazor improves on that pattern further. There are two main ways to develop with it.</p>
+
+<p>Option 1: Web Assembly Method
+When you choose to build a Blazor Web Assembly application it looks like this:</p>
+
+                </div>
+                <div class="toolbox">
+                    <ul>
+                        <li class="toolList"><span class="glyphicon glyphicon-thumbs-up">点赞</span>
+                        </li>
+                        <li class="toolList"><span class="glyphicon glyphicon-star-empty">收藏</span></li>
+                        <li class="toolList"><span class="glyphicon glyphicon-share-alt">分享</span></li>
+                        <li class="toolList"><span class="glyphicon glyphicon-eye-open">浏览量7</span></li>
+                    </ul>
+                </div>
+                <div class="commentbox">
+                    <textarea cols="80" rows="50" placeholder="来说几句吧......" class="mytextarea" id="content"></textarea>
+                    <div class="btn btn-info pull-right" id="comment">评论</div>
+                </div>
+                <div class="comment-list"></div>
+                <div class="choosePage">
+                    <ul class="prePage">
+                        
+                        <span class="glyphicon glyphicon-arrow-left"></span><a href="/literature/2019/12/27/waiwen.html">上一篇</a>
+                        
+
+                    </ul>
+                    <ul class="nextPage">
+
+                        
+                        <a href="/php/2019/12/28/study-php.html">下一篇</a><span class="glyphicon glyphicon-arrow-right"></span>
+                        
+                    </ul>
+                </div>
+            </div>
+            <a class="backTop" href="#"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        </div>
+
+
+        <!-- 菜单小图标 -->
+        <a href="#" id="color-bar">  
+            <div id="bar"></div>
+        </a>
+        <!-- 改变颜色 -->
+        <div class="color">
+            <div class="color-container">
+                <p>Choose your color</p>
+                <ul class="color-list">
+                    <li class="colorBox_1" onclick="choose(1)"></li>
+                    <li class="colorBox_2" onclick="choose(2)"></li>
+                    <li class="colorBox_3" onclick="choose(3)"></li>
+                    <li class="colorBox_4" onclick="choose(4)"></li>
+                    <li class="colorBox_5" onclick="choose(5)"></li>
+                    <li class="colorBox_6" onclick="choose(6)"></li>
+                </ul>
+                <p>Leave your footprints</p>
+            </div><!-- color-container end-->
+        </div><!-- color end-->
+
+    </div>
+    
+    
+
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script src="/public/js/jquery.comment.js"></script>
+    <script src="/public/js/content.js"></script>
+
+</body>
+</html>

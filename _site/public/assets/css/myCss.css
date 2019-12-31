@@ -1,0 +1,124 @@
+.info {
+  font-size: 20px;
+  color: #fff;
+}
+.info img{
+  border-radius: 50%;
+}
+
+/*////////////////////////////// 文字随机输入样式设置 */
+@import url("http://fonts.googleapis.com/css?family=Inconsolata:700");
+#textInput {
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+p {
+  font-family: Inconsolata, Source Code Pro, Consolas, monospace;
+  margin: 0 auto;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+
+/*/////////////////////////////////// 文章列表样式设置*/
+.ArticleNum{
+  display: block;
+  color: #89D9D0;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.article{
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+.articleContent {
+  width: 1200px; /* 这里还有待修改使其随窗口大小改变而改变，又同类固定 */
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.articleContent h2{
+  margin: 3%;
+  transition: all .3s;
+}
+.articleContent h2:hover{
+  color: #813c85;
+  font-size: 40px;
+}
+.articleContent p{
+  margin: 0 3%;
+  text-indent: 2em;
+  font-size: 28px;
+}
+.articleContent .articleInfo{
+  margin-top: 3%;
+  font-size: 20px;
+}
+.articleContent .articleInfo:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.articleInfo li {
+  list-style: none;
+  float: left;
+  margin-right: 2%;
+}
+.articleInfo .Rmore{
+  float: right;
+}
+
+.page{
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+.page:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.page a{
+  display: block;
+  float: left;
+  width: 100px;
+  font-size: 22px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.page a:first-child{
+  margin-right: 100px;
+}
+
+/*/////////////////////////////////// 个人简介样式设置*/
+.footer-container:before{
+  content: '';
+  display: block;
+  clear: both;
+}
+.footer-container{
+  width: 100%;
+  height: 100%;
+  margin: 3% 0;
+  /*border: 1px solid #897;*/
+}
+#Contact{
+  width: 100%;
+  height: 100%;
+}
+#Contact p{
+  width: 31%;
+  font-size: 20px;
+  margin: 0 auto;
+  /*background-color: #89a;*/
+}
