@@ -7,4 +7,6 @@ category: ['git', 'html', 'css', 'javascript', 'jquery']
 
 ---
 
-安装并学习git、Jekyll等的使用，然后将使用html、css、JavaScript和jQuery编写好的blog放到网上。
+1.安装并学习git、Jekyll等的使用
+
+2.将使用html、css、JavaScript和jQuery编写好的blog放到网上。

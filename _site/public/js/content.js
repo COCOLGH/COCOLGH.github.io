@@ -109,7 +109,7 @@ function delAnimation(selecter, operation, className) {
 addAnimation('.sidebar-nav-item', 'mouseenter', 'shake');
 delAnimation('.sidebar-nav-item', 'mouseleave', 'shake');
 
-// //////////左侧联系
+// //////////左侧联系 文字动画效果，需要的话只需要添加contactt-info类名即可
 addAnimation('.contact-info', 'mouseenter', 'bounceIn');
 delAnimation('.contact-info', 'mouseleave', 'bounceIn');
 

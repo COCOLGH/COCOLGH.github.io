@@ -1,0 +1,351 @@
+I"�7<p>一个基本的html模板</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0, maximum-scale=1"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"generator"</span> <span class="na">content=</span><span class="s">"Jekyll"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div></div>
+<h3 id="一基本概念">一、基本概念</h3>
+<p>1.html(HyperText MarkUp Language)：是超文S本标记语言（超文本：通过超链接形式有机的组织起来；标记：标签）</p>
+
+<p>2.后缀名：.html / .html</p>
+
+<p>3.不区分大小写</p>
+
+<p>4.html元素语法：  <br />
+     整个html以<code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code>开始，以<code class="highlighter-rouge">&lt;/html&gt;</code>结束  <br />
+     html以开始标签开始，以结束标签终止  <br />
+     元素的内容：开始标签与结束标签之间的内容  <br />
+     大多数html元素都有属性</p>
+
+<h3 id="二标签">二、标签</h3>
+<h4 id="1标签列举说明">1.标签列举说明</h4>
+<blockquote>
+  <p><code class="highlighter-rouge"><span class="nt">&lt;html&gt;&lt;/html&gt;</span></code></p>
+  <ul>
+    <li><code class="highlighter-rouge">&lt;body&gt;&lt;/body&gt;</code></li>
+    <li><code class="highlighter-rouge">&lt;title&gt;&lt;/title&gt;</code></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">&lt;meta&gt;</code>：表示网页元数据，是提供给浏览器和搜索引擎的关于网页的描述性数据  <br />
+段落标签：<code class="highlighter-rouge">&lt;p&gt;&lt;/p&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p>文本容器/段内分组<code class="highlighter-rouge">&lt;span&gt;&lt;/span&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p>标题标签<code class="highlighter-rouge">&lt;h1&gt;~&lt;h6&gt;</code>：一级表题到六级标题【字号由大到小,自动加黑】</p>
+</blockquote>
+
+<blockquote>
+  <p>水平线标签<code class="highlighter-rouge">&lt;hr /&gt;</code>
+	* width：宽度
+	* size：高度
+	* text-align：对齐方式</p>
+</blockquote>
+
+<blockquote>
+  <p>换行标签：<code class="highlighter-rouge">&lt;br /&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p>空格&amp;nbsp；</p>
+</blockquote>
+
+<blockquote>
+  <p>预留格式标签:<code class="highlighter-rouge">&lt;pre&gt;&lt;/pre&gt;</code> 【文本会按照输入的格式输出】</p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">&lt;a&gt;&lt;/a&gt;</code>：跳转页面</p>
+</blockquote>
+
+<p>    跳转当前页面的其他部分，如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div id="top"&gt;&lt;/div&gt;
+&lt;div id="content"&gt;
+  &lt;a href="top"&gt;头部&lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>    跳转其他页面，如：<code class="highlighter-rouge">&lt;a href="xxx.html"&gt;xxx&lt;/a&gt;</code></p>
+
+<p>    跳转到外部站点,，如：<code class="highlighter-rouge">&lt;a href="http://www.baidu.com"&gt;百度&lt;/a&gt;</code></p>
+
+<p>    虚拟超链接：<code class="highlighter-rouge">&lt;a href="#"&gt;内容文字&lt;/a&gt;</code></p>
+
+<blockquote>
+  <p>图象标签：<code class="highlighter-rouge">&lt;img /&gt;</code></p>
+  <ul>
+    <li>图像常见格式：
+       JPEG：有损压缩，几乎无颜色限制，处理时可控制压缩比率
+       GIF：简单动画、背景透明
+       PNG：无损压缩、透明、交错、动画</li>
+    <li>插入图片:</li>
+    <li>img的属性：
+       src：路径      文件名
+       alt：图片不显示时，提示</li>
+    <li>路径:
+ <img src="../public/images/lujing.png" alt="avatar" />;
+ 相对路径：
+       ./ ：同级文件
+       ../ ：上一级文件</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>区块标签<code class="highlighter-rouge">&lt;div&gt;&lt;/div&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p>列表标签</p>
+  <ul>
+    <li>无序标签<code class="highlighter-rouge">&lt;ul&gt;&lt;/ul&gt;</code>：符号开头</li>
+    <li>有序标签<code class="highlighter-rouge">&lt;ol&gt;&lt;/ol&gt;</code>：默认数字作为序号开头</li>
+    <li>通常结合<code class="highlighter-rouge">&lt;li&gt;&lt;/li&gt;</code>使用</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>表格标签</p>
+  <ul>
+    <li><code class="highlighter-rouge">&lt;table&gt;&lt;/table&gt;</code>：定义表格</li>
+    <li><code class="highlighter-rouge">&lt;caption&gt;&lt;/caption&gt;</code>：定义表格标题</li>
+    <li><code class="highlighter-rouge">&lt;th&gt;&lt;/th&gt;</code>：表头单元格</li>
+    <li><code class="highlighter-rouge">&lt;tr&gt;&lt;tr&gt;</code>：定义行</li>
+    <li><code class="highlighter-rouge">&lt;td&gt;&lt;/td&gt;</code>：定义单元格	
+       rowspan：纵向合并单元格	
+       colspan：横向合并danyuange
+       公共属性
+       align
+       bgcolor
+       border
+       width
+       height</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>表单标签</p>
+  <ul>
+    <li><code class="highlighter-rouge">&lt;from&gt;&lt;/from&gt;</code>：定义一个表单区域，用来采集用户信息
+       action属性：数据处理网页
+       表单元素：文本框、按钮、单选、多选【放置于<code class="highlighter-rouge">&lt;from&gt;&lt;/from&gt;</code>内】</li>
+    <li><code class="highlighter-rouge">&lt;input&gt;</code>：定义输入域
+       type属性：
+      · text（文本），
+      · password（密码），
+      · radio(单选，checked默认勾选；注意：同一组的单选框的name属性的值要一致)，
+      · checkbox（复选框，checked默认勾选；同一组多选的name属性值要一致），
+      · button（普通按钮）
+      · submit（提交按钮）
+      · reset（重置按钮）
+      · image（图片按钮）
+           name属性：为该input标签起名字
+           value属性：按钮中显示的文字/文本框中的内容是什么    /    传给后端的值</li>
+    <li>文本域：<code class="highlighter-rouge">&lt;textarea&gt;&lt;/textarea&gt;</code>
+       rows：行数
+       cols：列数</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>按钮标签<code class="highlighter-rouge">&lt;button&gt;&lt;/button&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p>文字</p>
+  <ul>
+    <li>文字设计标签<code class="highlighter-rouge">&lt;front&gt;&lt;/front&gt;</code>
+       color：字体颜色
+       face：字体样式
+       size：字体大小</li>
+    <li>字体加粗标签： <code class="highlighter-rouge">&lt;b&gt;无语义化&lt;/b&gt;</code>、<code class="highlighter-rouge">&lt;strong&gt;语义化了&lt;/strong&gt;</code></li>
+    <li>斜体标签: <code class="highlighter-rouge">&lt;i&gt;无语义化&lt;/i&gt;</code>、<code class="highlighter-rouge">&lt;em&gt;语义化&lt;/em&gt;</code></li>
+    <li>删除线<code class="highlighter-rouge">&lt;del&gt;&lt;/del&gt;</code></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>输入标题<code class="highlighter-rouge">&lt;label&gt;&lt;/label&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p>下拉选项</p>
+  <ul>
+    <li>定义列表<code class="highlighter-rouge">&lt;select&gt;&lt;/select&gt;</code>
+       属性multiple：设为可多选
+       属性size：下拉菜单显示的项目数</li>
+    <li>定义列表中的选项<code class="highlighter-rouge">&lt;option&gt;&lt;/option&gt;</code></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>选项组</p>
+  <ul>
+    <li>定义<code class="highlighter-rouge">&lt;optgroup&gt;&lt;/optgroup&gt;</code></li>
+    <li>定义选项<code class="highlighter-rouge">&lt;option&gt;&lt;/option&gt;</code></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p>框架标签<frameset></frameset>  <br />
+	* 作用：将几个页面作为一个网页的几个部分显示，便于网页的开发与维护。一个框架网页中的每个窗口都是一个完整的HTML网页  <br />
+	* <code class="highlighter-rouge">&lt;frameset&gt;&lt;/frameset&gt;</code>中不需要写<code class="highlighter-rouge">&lt;body&gt;&lt;/body&gt;</code></p>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p>属性：  <br />
+	* rows：横向分割网页。属性值决定分割页面的大小，如：cols = “30%, 70%”  <br />
+	* cols：纵向分割网页。  <br />
+	* border：边框</p>
+  </blockquote>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p>包含的标签<code class="highlighter-rouge">&lt;frame&gt;&lt;/frame&gt;</code>  <br />
+		     表示框架窗口中的内容，一个<code class="highlighter-rouge">&lt;frame&gt;&lt;/frame&gt;</code>表示一个框架窗口，排序从左到右，从上到下  <br />
+		     src：其属性值是框架内容的url  <br />
+		     noresize：表示该框架不可被用户改变大小  <br />
+		     scrolling：表示是否有滚动条</p>
+  </blockquote>
+</blockquote>
+
+<p>2.注释
+<code class="highlighter-rouge">&lt;!-- 注释内容 --&gt;</code>  <br />
+3.标签分类</p>
+
+<blockquote>
+  <p>标签可分为：
+     成对标签，如：<code class="highlighter-rouge">&lt;div&gt;&lt;/div&gt;</code>
+     单个标签，如：<code class="highlighter-rouge">&lt;img/&gt;</code>
+     块级元素，行内元素和行内块级元素，还有置换元素</p>
+</blockquote>
+
+<p>4.标签嵌套</p>
+
+<blockquote>
+  <p>标签不断嵌套，形成了HTML DOM树
+	• 父元素
+	• 子元素
+	• 同级元素</p>
+</blockquote>
+
+<p>5.web语义化</p>
+<blockquote>
+  <p>定义：让页面具有良好的结构与含义，从而让人和机器都能快速理解网页内容</p>
+</blockquote>
+
+<blockquote>
+  <p>优点：
+     结构清晰，有利于团队的开发、维护<人>
+&nbsp;&nbsp;&nbsp;&nbsp; 有利于搜索引擎理解【SEO(Search Engine Optimization)搜索引擎优化】<机器>
+&nbsp;&nbsp;&nbsp;&nbsp; 容易兼容不同设备<机器></机器></机器></人></p>
+</blockquote>
+
+<blockquote>
+  <p>常见语义化标签：em、strong、dd、dl、dt</p>
+</blockquote>
+
+<blockquote>
+  <p>例子：自定义列表dl、列表项dt、描述dd</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;超文本标记语言&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;层叠样式表&lt;/dd&gt;
+&lt;/dl&gt; 
+</code></pre></div></div>
+
+<h3 id="三html文件结构">三、HTML文件结构</h3>
+<p>1.HTML文件的基本结构</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>  <span class="c">&lt;!-- 表明文档类型符合HTML5标准--&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>    <span class="c">&lt;!-- lang属性：搜索引擎。en：英文；zh：中文 --&gt;</span>
+  <span class="c">&lt;!-- head标签部分成为网页的头部：包含浏览器、搜索引擎所需信息 --&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>  <span class="c">&lt;!-- meta：元数据。可放网页搜索关键字。charset属性：字符集编码方式；由浏览器解析：UTF-8是国际编码 --&gt;</span>
+    <span class="nt">&lt;title&gt;</span>web page<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  
+  <span class="c">&lt;!-- body主体：网页中包含的具体内容 --&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+   
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div></div>
+
+<p>2.字符集与编码</p>
+<blockquote>
+  <p>utf-8
+     gbk
+     unicode
+     gb2312</p>
+</blockquote>
+
+<p>3.乱码问题：</p>
+<blockquote>
+  <p>源文件保存时的编码</p>
+  <ul>
+    <li>源文件声明<code class="highlighter-rouge">&lt;meta charset="编码方式"&gt;</code>  <br />
+当上面两者不一致时，就会出现乱码问题</li>
+  </ul>
+</blockquote>
+
+<p>4.HTML编辑器</p>
+<blockquote>
+  <p>记事本
+     Sublime Text3 —— emmet插件【最常用的】
+     vs code【也挺火】
+     WebStorm【涉及工程会用到】
+     HBuilder【一款由我国开发的前端开发IDE】
+     ……</p>
+</blockquote>
+
+<h3 id="四居中">四、居中</h3>
+<p>1.容器居中  <br />
+    提前：父级容器有宽高 <br />
+    • 左右居中
+	margin：0 auto;</p>
+
+<p>2.内容居中左右  <br />
+	    text-align:center;</p>
+
+<p>3.文字上下居中  <br />
+	    提前：设置容器的高度。如：height: 20px;  <br />
+	    适用于：单行文字的，多行的的话不可  <br />
+	    line-height: 20px;</p>
+
+<h3 id="五习题">五、习题</h3>
+<ol>
+  <li></li>
+  <li></li>
+  <li>4.解析：
+HTML的结构包括头部(Head)、主体(Body)两大部分，其中头部描述浏览器所需的信息，而主体则包含所要说明的具体内容。
+其实这句话没有绝对的正确和绝对的错误的说法，因为按照现在的W3C制定的HTML 4.01标准，HTML文档是制必须包括头部知和主体两大部分的。
+但是如果你写的网页不包含头部，网页一般还是运行显示出来</li>
+</ol>
+:ET
