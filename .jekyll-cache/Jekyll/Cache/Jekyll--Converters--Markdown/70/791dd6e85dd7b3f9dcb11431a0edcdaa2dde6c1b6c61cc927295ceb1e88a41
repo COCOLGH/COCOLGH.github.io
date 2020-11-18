@@ -1,9 +1,0 @@
-I"8<p>选择器	实例	 选取</p>
-<ul>
-  <li>$(“*”)	所有元素
-#id	$(“#lastname”)	id=”lastname” 的元素
-.class	$(“.intro”)	所有 class=”intro” 的元素
-element	$(“p”)	所有 p 元素
-.class.class	$(“.intro.demo”)	所有 class=”intro” 且 class=”demo” 的元素</li>
-</ul>
-:ET
