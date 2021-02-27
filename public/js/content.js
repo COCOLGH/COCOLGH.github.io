@@ -42,14 +42,19 @@ function choose(num) {
 	// 获取右侧内容对象
 	var content = document.getElementsByClassName('myContent')[0];
 	var original = document.getElementsByClassName('original')[0];
-	var toolbox = document.getElementsByClassName('toolbox')[0];
+	var belongto = document.getElementsByClassName('belongTo');
+	// var toolbox = document.getElementsByClassName('toolbox')[0];
 	
 	// 文章头部“原创”的颜色
 	original.style.color = "#000";
 	// 文章内容颜色
 	content.style.color = "#fff";
 	// 文章底部文字颜色
-	toolbox.style.color = "#000";
+	// toolbox.style.color = "#000";
+	// 标签文字的颜色
+	for(var i = 0; i < belongto.length; i++) {
+		belongto[i].style.color = "#000";
+	}
 
 	switch(num){
 		case 1:
