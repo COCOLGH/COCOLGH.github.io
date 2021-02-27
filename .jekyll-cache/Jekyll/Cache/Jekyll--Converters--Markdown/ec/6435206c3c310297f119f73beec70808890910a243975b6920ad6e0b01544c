@@ -1,0 +1,417 @@
+I"=K<h1 id="一what">一、what？</h1>
+<ol>
+  <li>CSS：( Cascading Style Sheets ) 层叠样式表</li>
+  <li>作用：将网页的内容和样式分离，便于修改样式和日后网页的维护</li>
+</ol>
+
+<h1 id="二基本语法">二、基本语法</h1>
+<h3 id="1-添加css样式的方法">1、 添加CSS样式的方法</h3>
+
+<h4 id="1-行内样式">1. 行内样式</h4>
+<p>在html标签中，使用style=”“放置css样式，从而在html网页中添加css样式，如： 
+<code class="highlighter-rouge">&lt;p style="color:red; font-size:20px;"&gt;css内联样式&lt;/p&gt;</code></p>
+
+<h4 id="2-内部样式">2. 内部样式</h4>
+
+<p>写在html文件中的head标签中，添加style标签并将css样式代码写在其中  <br />
+  特点：  <br />
+  a.即使有公共CSS代码，也是每个页面都要定义的  <br />
+  b.适合文件少，CSS代码也不多的情况  <br />
+  c.若网站页面较多，每个文件就会变得很大，后期维护难度较大</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+        <span class="nt">p</span> <span class="p">{</span>
+            <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+            <span class="nl">font-size</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>css内部样式<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h4 id="3外部样式">3.外部样式</h4>
+<ol>
+  <li>另外再新建一个css文件，并将它通过link标签导入html文件中使用</li>
+  <li>特点：  <br />
+    a. 页面结构HTML和样式CSS代码完全分离  <br />
+    b. 维护方便   <br />
+    c. 如果需要改变网站风格，只需要修改公共CSS文件  <br />
+    d. 可以在同一个HTML文档内部引用多个外部样式文件</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* {
+    margin: 0;
+    padding: 0;
+}
+p {
+    color: green;
+    font-weight: 900;
+}
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"css/test.css"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+        <span class="nt">p</span> <span class="p">{</span>
+            <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+            <span class="nl">font-size</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>css内部样式<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>4.CSS添加方法优先级</p>
+<ol>
+  <li>多重样式可以层叠，可以覆盖</li>
+  <li>样式的优先级按照“就近原则”</li>
+  <li>行内样式&gt;内嵌样式&gt;外部样式&gt;浏览器默认样式
+2、选择器</li>
+  <li>标签选择器</li>
+  <li>通过html标签名字来选择需要添加css样式的标签
+p {
+  color:red;
+}</li>
+  <li>通过input标签名选中标签，然后再通过type属性值 或者 name属性值筛选</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
+  input[type="text"] {
+    border: 1px solid red;
+  }
+  input[name="password"] {
+    border: 1px solid blue;
+  }
+&lt;/style&gt;
+&lt;input type="text"&gt;
+&lt;input type="password" name="password"&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>class选择器  <br />
+• 通过为html标签添加class属性来添加class名 <br />
+• 使用. class属性名来选择需要添加css样式</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;head&gt;
+    &lt;style&gt;
+        .mycss {
+      color:yellow;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;p class="mycss"&gt;通过class选择器添加css样式&lt;/p&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>id选择器<br />
+• 通过为html标签id属性来添加id名 
+• 使用#id属性名来选择需要添加css样式</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;head&gt;
+    &lt;style&gt;
+        #mycss {
+      color:yellow;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;p id="mycss"&gt;通过class选择器添加css样式&lt;/p&gt;
+</code></pre></div></div>
+<ol>
+  <li>全局选择器 *<br />
+默认选中html内所有的内容，但优先级最低</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+&lt;/style&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>嵌套 
+层层选择<br />
+/<em>选中的是div里面嵌套的ul、ul里面嵌套的li标签</em>/<br />
+div ul li {
+  color: red;
+}
+/<em>选中class名为wrap中的class名为content的内容</em>/<br />
+.wrap .content {
+  font-size:80px;
+}
+/<em>选中id名为wrap中的id名为content的内容</em>/<br />
+#wrap #content {
+  font-size:80px;
+}</li>
+  <li>集体(同时选中) 
+通过逗号来分隔需要选择html结构部分 
+/<em>同时选中p标签和h1标签</em>/<br />
+p, h1 {
+  font-family: “宋体”;
+}</li>
+  <li>其他选择方式 
+3、文本css样式</li>
+  <li>单位</li>
+  <li>颜色值</li>
+  <li>文本 
+比较字体间距、行间距和段间距的区别：</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>css 单元作业必做第一题<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h2</span> <span class="p">{</span>
+            <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+            <span class="nl">font-size</span><span class="p">:</span> <span class="m">36px</span><span class="p">;</span>
+            <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"宋体"</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nt">p</span> <span class="p">{</span>
+            <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+            <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"微软雅黑"</span><span class="p">;</span>
+            <span class="c">/*首行缩进*/</span>
+            <span class="nl">text-indent</span><span class="p">:</span> <span class="m">2em</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>css 内嵌样式 标题<span class="nt">&lt;/h2&gt;</span>
+  /*字体间距*/
+    <span class="nt">&lt;P</span> <span class="na">style=</span><span class="s">"letter-spacing: 2em;"</span><span class="nt">&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi itaque cumque ipsam mollitia optio aliquam voluptatum sed, fuga non quisquam quas, eveniet vel sunt ut error libero! Veniam, hic molestiae.
+    <span class="nt">&lt;/P&gt;</span>
+  
+  /*行间距*/
+    <span class="nt">&lt;P</span> <span class="na">style=</span><span class="s">"line-height: 2em;"</span><span class="nt">&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur harum, neque excepturi quo repudiandae est autem esse error at dignissimos odio numquam eum iste vel similique ad quia veritatis cum!
+    <span class="nt">&lt;/P&gt;</span>
+  
+  /*段间距*/
+    <span class="nt">&lt;P</span> <span class="na">style=</span><span class="s">"margin-top: 2em;"</span><span class="nt">&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur harum, neque excepturi quo repudiandae est autem esse error at dignissimos odio numquam eum iste vel similique ad quia veritatis cum!
+    <span class="nt">&lt;/P&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>效果图：</p>
+<ol>
+  <li>字体
+4、背景 <br />
+前提：空元素需要先定义元素的高度和宽度</li>
+  <li>background    颜色 图片 repeat</li>
+  <li>background-color    颜色值</li>
+  <li>background-image    url(“图片路径”)</li>
+  <li>background-repeat    图片是否重复<br />
+a. repeat    重复 
+b. repeat-x    x轴上重复<br />
+c. repeat-y    y轴上重复<br />
+d. no-repeat    不重复 
+5、超链接<a></a></li>
+  <li>a:link    普通的、未被访问的链接</li>
+  <li>a:visited    用户已访问的链接</li>
+  <li>a:hover    鼠标指针位于链接的上方悬停</li>
+  <li>a:active    链接被点击的时刻 
+6、列表 ul、li  ol、li</li>
+  <li>list-style    所有用于类别的属性，设置标号样式</li>
+  <li>list-style-image    为列表项标志设置图像 
+列表项标志可以使用图片，用法和背景图片类似</li>
+  <li>list-style-positon    标志的位置</li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+        <span class="nt">p</span> <span class="p">{</span>
+            <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+            <span class="nl">font-size</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nt">ul</span> <span class="nt">li</span><span class="p">{</span>
+            <span class="nl">border-left</span><span class="p">:</span> <span class="m">3px</span> <span class="nb">solid</span> <span class="no">red</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nc">.inside</span> <span class="p">{</span>
+            <span class="nl">list-style-position</span><span class="p">:</span> <span class="nb">inside</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nc">.outside</span> <span class="p">{</span>
+            <span class="nl">list-style-position</span><span class="p">:</span> <span class="nb">outside</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>css内部样式<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"inside"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>html<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>css<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>javascript<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"outside"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span>html<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>css<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>javascript<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>• inside：列表标志向右缩进到li中 
+• outside：列表标志向左突出到li外面</p>
+
+<ol>
+  <li>list-style-type    标志的类型</li>
+</ol>
+
+<p>7、表格</p>
+<ol>
+  <li>border</li>
+  <li>width</li>
+  <li>height</li>
+  <li>border-collapse    属性设置表格的边框是否被合并为一个单一的边框</li>
+</ol>
+
+<p>• 使用 border-collapse:collapse;合并边框</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+<span class="nt">table</span>
+  <span class="p">{</span>
+  <span class="nl">border-collapse</span><span class="p">:</span><span class="nb">collapse</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">table</span><span class="o">,</span> <span class="nt">td</span><span class="o">,</span> <span class="nt">th</span>
+  <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th&gt;</span>Firstname<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th&gt;</span>Lastname<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Bill<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Gates<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Steven<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Jobs<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;p&gt;&lt;b&gt;</span>注释：<span class="nt">&lt;/b&gt;</span>如果没有规定 !DOCTYPE，border-collapse 属性可能会引起意想不到的错误。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>没有合并边框：                      合边框之后：</p>
+<ol>
+  <li>css表格，奇偶选择器:nth-child(odd|even)<br />
+a. odd：奇数选择器<br />
+b. even：偶数选择器 
+c.</li>
+</ol>
+
+<p>8、CSS属性的继承</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"color: red;"</span><span class="nt">&gt;</span>父元素：<span class="nt">&lt;span&gt;</span>继承元素的color属性<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">style=</span><span class="s">"border: 1px solid"</span><span class="nt">&gt;</span>父元素：<span class="nt">&lt;span&gt;</span>不继承元素的border属性<span class="nt">&lt;/span&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>效果图：<br />
+9、CSS清楚默认样式 
+CSS清除默认样式.pdf</p>
+
+<p>三、CSS权重</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>类别</th>
+      <th>说明</th>
+      <th>权重表示</th>
+      <th>权值表示</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>!important</td>
+      <td>强制使用该样式</td>
+      <td>优先级最高</td>
+      <td>优先级最高</td>
+    </tr>
+    <tr>
+      <td>行内选择器</td>
+      <td>添加元素属性 style = “”</td>
+      <td>(1.0.0.0)</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>id选择器</td>
+      <td>#id名</td>
+      <td>(0.1.0.0)</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>class选择器</td>
+      <td>.class名</td>
+      <td>(0.0.1.0)</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>标签选择器</td>
+      <td>标签名</td>
+      <td>(0.0.0.1)</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>伪元素选择器</td>
+      <td>p:first-child</td>
+      <td>(0.0.0.1)</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>四、习题</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
+     body { color:#333; } 
+   #text{ color:#f00; } 
+  .content { color:#00f; } 
+  .gray { color:#666; } 
+&lt;/style&gt;
+
+&lt;p id="text" class="content gray"&gt;锦瑟无端五十弦，一弦一柱思华年。&lt;/p&gt; 
+</code></pre></div></div>
+
+<p>涉及到权重问题</p>
+:ET

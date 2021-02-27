@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/animate.css">
+    <link rel="stylesheet" href="/public/css/content.css">
+    <title>content</title>
+</head>
+
+<body>
+    <div id="container" class="wrap row">
+
+        <div class="sidebar">
+            <div class="sidebar-container">
+                <div class="img">
+                    <!-- <img src="/public/images/ningM.jpg" alt=""> -->
+                    <div class="parent">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="sidebar-about">
+                    <h2><a href="/index.html">COCOL</a></h2>
+                    <p>I live in the world, just want to understand some truth, meet some interesting things.</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a class="sidebar-nav-item animated active" href="/index.html">首页</a>
+                    <a href="#">相关文章</a>
+                    <a href="links.html">友情链接</a>
+                    <a href="#">推荐内容</a>
+                </nav>
+                <p>联系方式：icheryl@163.com</p>
+            </div>
+        </div>
+        <div class="myContent">
+            <div class="content-container">
+                <h2>html基础知识</h2>
+                <div class="contMsg">
+                    <ul class="Msg">
+                        <li class="original">原创</li>
+                        <li>发布于2019-12-30 00:00:00 +0800 </li>
+                        
+                        <li class="belongTo">html</li>
+                        
+                    </ul>
+                </div>
+                <div class="cont">
+                    <h1 id="一基本概念">一、基本概念</h1>
+
+<h3 id="1-htmlhypertext-markup-language是超文本标记语言超文本通过超链接形式有机的组织起来标记标签">1. html(HyperText MarkUp Language)：是超文本标记语言（超文本：通过超链接形式有机的组织起来；标记：标签）</h3>
+
+<h3 id="2-后缀名html--htm">2. 后缀名：.html / .htm</h3>
+
+<h3 id="3-不区分大小写">3. 不区分大小写</h3>
+
+<h3 id="4-html元素语法">4. html元素语法：</h3>
+
+<p><!-- 
+    首行缩进的实现方式:
+    1. &ensp;&ensp;  
+    2. &emsp;&emsp;
+    3. &nbsp;&nbsp;&nbsp;&nbsp; 
+  -->
+     a. 整个html以&lt;html&gt;开始，以&lt;/html&gt;结束</p>
+
+<p>   b. html以开始标签开始，以结束标签终止</p>
+
+<p>   c. 元素的内容：开始标签与结束标签之间的内容</p>
+
+<p>   d. 大多数html元素都有属性</p>
+
+<h1 id="二标签">二、标签</h1>
+
+<h3 id="1-标签列举说明">1、 标签列举说明</h3>
+
+<h4 id="1-htmlhtml">1. <code class="highlighter-rouge"><span class="nt">&lt;html&gt;&lt;/html&gt;</span></code></h4>
+
+<h4 id="2-bodybody">2. <code class="highlighter-rouge">&lt;body&gt;&lt;/body&gt;</code></h4>
+
+<h4 id="3-标题信息titletitle">3. 标题信息：<code class="highlighter-rouge">&lt;title&gt;&lt;/title&gt;</code></h4>
+
+<h4 id="4-表示网页元数据是提供给浏览器和搜索引擎的关于网页的描述性数据">4. <meta />：表示网页元数据，是提供给浏览器和搜索引擎的关于网页的描述性数据</h4>
+
+<h4 id="5-段落标签pp">5. 段落标签：<code class="highlighter-rouge">&lt;p&gt;&lt;/p&gt;</code></h4>
+
+<h4 id="6-文本容器段内分组spanspan">6. 文本容器/段内分组<code class="highlighter-rouge">&lt;span&gt;&lt;/span&gt;</code></h4>
+
+<h4 id="7-标题标签h1h6一级表题到六级标题字号由大到小自动加黑">7. 标题标签<code class="highlighter-rouge">&lt;h1&gt;~&lt;h6&gt;</code>：一级表题到六级标题【字号由大到小,自动加黑】</h4>
+
+<h4 id="8-框架标签">8. 框架标签<frameset></frameset></h4>
+
+<p>a. 作用：将几个页面作为一个网页的几个部分显示，便于网页的开发与维护。一个框架网页中的每个窗口都是一个完整的HTML网页
+b. <frameset></frameset>中不需要写&lt;body&gt;&lt;/body&gt;
+c. 属性：
+ⅰ. rows：横向分割网页。属性值决定分割页面的大小，如：cols = “30%, 70%”
+ⅱ. cols：纵向分割网页。
+ⅲ. border：边框
+d. 包含的标签<frame></frame>
+ⅰ. 表示框架窗口中的内容，一个<frame></frame>表示一个框架窗口，排序从左到右，从上到下
+ⅱ. src：其属性值是框架内容的url
+ⅲ. noresize：表示该框架不可被用户改变大小
+ⅳ. scrolling：表示是否有滚动条
+ⅴ.</p>
+
+<h4 id="9-水平线标签hr-">9. 水平线标签<code class="highlighter-rouge">&lt;hr /&gt;</code></h4>
+
+<p>     a. width：宽度</p>
+
+<p>     b. size：高度</p>
+
+<p>     c. text-align：对齐方式</p>
+
+<h4 id="10-换行标签br-">10. 换行标签：<code class="highlighter-rouge">&lt;br /&gt;</code></h4>
+
+<h4 id="11-空格nbsp">11. 空格<code class="highlighter-rouge">&amp;nbsp；</code></h4>
+
+<h4 id="12-预留格式标签prepre-文本会按照输入的格式输出">12. 预留格式标签:&lt;pre&gt;&lt;/pre&gt; 【文本会按照输入的格式输出】</h4>
+
+<h4 id="13-超链接标签跳转页面">13. 超链接标签<a></a>：跳转页面</h4>
+
+<p>   a. 跳转当前页面的其他部分，如：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;div id="top"&gt;&lt;/div&gt;
+  &lt;div id="content"&gt;
+    &lt;a href="top"&gt;头部&lt;/a&gt;
+  &lt;/div&gt;
+</code></pre></div></div>
+
+<p>   b. 跳转其他页面，如：<code class="highlighter-rouge">&lt;a href="xxx.html"&gt;xxx&lt;/a&gt;</code></p>
+
+<p>   c. 跳转到外部站点,，如：<code class="highlighter-rouge">&lt;a href="http://www.baidu.com"&gt;百度&lt;/a&gt;</code></p>
+
+<p>   d. 虚拟超链接：<code class="highlighter-rouge">&lt;a href="#"&gt;内容文字&lt;/a&gt;</code></p>
+
+<h4 id="14-图象标签img-">14. 图象标签：<code class="highlighter-rouge">&lt;img /&gt;</code></h4>
+
+<p>     a. 图像常见格式：</p>
+
+<p>     ⅰ. JPG：有损压缩，色彩丰富图片</p>
+
+<p>     ⅱ. JPEG：有损压缩，几乎无颜色限制，处理时可控制压缩比率</p>
+
+<p>     ⅲ. GIF：简单动画、背景透明</p>
+
+<p>     ⅳ. PNG：无损压缩、透明、交错、动画</p>
+
+<p>     b. 插入图片</p>
+
+<p>     ⅰ. img的属性：</p>
+
+<p>       1. src：路径 + 文件名</p>
+
+<p>       2. alt：图片不显示时，提示</p>
+
+<p>     c. 路径</p>
+
+<p>    相对路径：</p>
+
+<p>       •  ./ ：同级文件</p>
+
+<p>       •  ../ ：上一级文件</p>
+
+<h4 id="15-区块标签divdiv">15. 区块标签<code class="highlighter-rouge">&lt;div&gt;&lt;/div&gt;</code></h4>
+
+<h4 id="16-列表标签">16. 列表标签</h4>
+
+<p>   a. 无序标签<code class="highlighter-rouge">&lt;ul&gt;&lt;/ul&gt;</code>：符号开头</p>
+
+<p>   b. 有序标签<code class="highlighter-rouge">&lt;ol&gt;&lt;/ol&gt;</code>：默认数字作为序号开头</p>
+
+<p>   c. 通常结合<code class="highlighter-rouge">&lt;li&gt;&lt;/li&gt;</code>使用</p>
+
+<h4 id="17-表格标签">17. 表格标签</h4>
+
+<p>  a. <code class="highlighter-rouge">&lt;table&gt;&lt;/table&gt;</code>：定义表格</p>
+
+<p>   b. <code class="highlighter-rouge">&lt;caption&gt;&lt;/caption&gt;</code>：定义表格标题</p>
+
+<p>   c. <code class="highlighter-rouge">&lt;th&gt;&lt;/th&gt;</code>：表头单元格</p>
+
+<p>   d. <code class="highlighter-rouge">&lt;tr&gt;&lt;tr&gt;</code>：定义行</p>
+
+<p>   e. <code class="highlighter-rouge">&lt;td&gt;&lt;/td&gt;</code>：定义单元格</p>
+
+<p>     ⅰ. rowspan：纵向合并单元格</p>
+
+<p>     ⅱ. colspan：横向合并danyuange</p>
+
+<p>   f. 公共属性</p>
+
+<p>     ⅰ. align</p>
+
+<p>     ⅱ. bgcolor</p>
+
+<p>     ⅲ. border</p>
+
+<p>     ⅳ. width</p>
+
+<p>     ⅴ. height</p>
+
+<h4 id="18-表单标签">18. 表单标签</h4>
+
+<p>   a. <code class="highlighter-rouge">&lt;from&gt;&lt;/from&gt;</code>：定义一个表单区域，用来采集用户信息</p>
+
+<p>     ⅰ. action属性：数据处理网页</p>
+
+<p>     ⅱ. 表单元素：文本框、按钮、单选、多选【放置于 <code class="highlighter-rouge">&lt;from&gt;&lt;/from&gt;</code> 内】</p>
+
+<p>   b. <code class="highlighter-rouge">&lt;input&gt;</code>：定义输入域</p>
+
+<p>     ⅰ. type属性：</p>
+
+<p>       1. text（文本），</p>
+
+<p>       2. password（密码），</p>
+
+<p>       3. radio(单选，checked默认勾选；注意：同一组的单选框的name属性的值要一致)，</p>
+
+<p>       4. checkbox（复选框，checked默认勾选；同一组多选的name属性值要一致），</p>
+
+<p>       5. button（普通按钮）</p>
+
+<p>       6. submit（提交按钮）</p>
+
+<p>       7. reset（重置按钮）</p>
+
+<p>       8. image（图片按钮）</p>
+
+<p>     ⅱ. name属性：为该input标签起名字</p>
+
+<p>     ⅲ. value属性：按钮中显示的文字/文本框中的内容是什么    /    传给后端的值</p>
+
+<p>   c. 文本域：<code class="highlighter-rouge">&lt;textarea&gt;&lt;/textarea&gt;</code></p>
+
+<p>     • rows：行数
+     • cols：列数</p>
+
+<h4 id="19-按钮标签buttonbutton">19. 按钮标签<code class="highlighter-rouge">&lt;button&gt;&lt;/button&gt;</code></h4>
+
+<h4 id="20-文字">20. 文字</h4>
+
+<p>   a. 文字设计标签<code class="highlighter-rouge">&lt;front&gt;&lt;/front&gt;</code></p>
+
+<p>     ⅰ. color：字体颜色</p>
+
+<p>     ⅱ. face：字体样式</p>
+
+<p>     ⅲ. size：字体大小</p>
+
+<p>   b. 字体加粗标签</p>
+
+<p>     ⅰ. <code class="highlighter-rouge">&lt;b&gt;无语义化&lt;/b&gt;</code></p>
+
+<p>     ⅱ. <code class="highlighter-rouge">&lt;strong&gt;语义化了&lt;/strong&gt;</code></p>
+
+<p>   c. 斜体标签</p>
+
+<p>     ⅰ. <code class="highlighter-rouge">&lt;i&gt;无语义化&lt;/i&gt;</code></p>
+
+<p>     ⅱ. <code class="highlighter-rouge">&lt;em&gt;语义化&lt;/em&gt;</code></p>
+
+<p>   d. 删除线<code class="highlighter-rouge">&lt;del&gt;&lt;/del&gt;</code></p>
+
+<h4 id="21-输入标题labellabel">21. 输入标题<code class="highlighter-rouge">&lt;label&gt;&lt;/label&gt;</code></h4>
+
+<h4 id="22-下拉选项">22. 下拉选项</h4>
+
+<p>   a. 定义列表<code class="highlighter-rouge">&lt;select&gt;&lt;/select&gt;</code></p>
+
+<p>     ⅰ. 属性multiple：设为可多选</p>
+
+<p>     ⅱ. 属性size：下拉菜单显示的项目数</p>
+
+<p>   b. 定义列表中的选项<code class="highlighter-rouge">&lt;option&gt;&lt;/option&gt;</code></p>
+
+<h4 id="23-选项组">23. 选项组</h4>
+
+<p>   a. 定义<code class="highlighter-rouge">&lt;optgroup&gt;&lt;/optgroup&gt;</code></p>
+
+<p>   b. 定义选项<code class="highlighter-rouge">&lt;option&gt;&lt;/option&gt;</code></p>
+
+<h3 id="2注释">2.注释</h3>
+
+<!-- 注释内容 -->
+<ol>
+  <li>标签分类</li>
+  <li>标签可分为：
+a. 成对标签，如：&lt;div&gt;&lt;/div&gt;
+b. 单个标签，如：<img /></li>
+  <li>&lt;按块级元素、行级元素划分，拓展置换元素&gt;
+块级元素，行内元素和行内块级元素，还有置换元素</li>
+  <li>标签嵌套
+标签不断嵌套，形成了HTML DOM树
+• 父元素
+• 子元素
+• 同级元素
+5.web语义化</li>
+  <li>定义：让页面具有良好的结构与含义，从而让人和机器都能快速理解网页内容</li>
+  <li>优点：
+a. 结构清晰，有利于团队的开发、维护<人>
+b. 有利于搜索引擎理解【SEO(Search Engine Optimization)搜索引擎优化】<机器>
+c. 容易兼容不同设备<机器></机器></机器></人></li>
+  <li>常见语义化标签：em、strong、dd、dl、dt</li>
+  <li>例子：
+a. 自定义列表dl、列表项dt、描述dd</li>
+</ol>
+<dl>
+  <dt>HTML</dt>
+  <dd>超文本标记语言</dd>
+  <dt>CSS</dt>
+  <dd>层叠样式表</dd>
+</dl>
+
+<h1 id="三html文件结构">三、HTML文件结构</h1>
+
+<h3 id="1-html文件的基本结构">1、 HTML文件的基本结构</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>  <span class="c">&lt;!-- 表明文档类型符合HTML5标准--&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>    <span class="c">&lt;!-- lang属性：搜索引擎。en：英文；zh：中文 --&gt;</span>
+  <span class="c">&lt;!-- head标签部分成为网页的头部：包含浏览器、搜索引擎所需信息 --&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>  <span class="c">&lt;!-- meta：元数据。可放网页搜索关键字。charset属性：字符集编码方式；由浏览器解析：UTF-8是国际编码 --&gt;</span>
+    <span class="nt">&lt;title&gt;</span>web page<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  
+  <span class="c">&lt;!-- body主体：网页中包含的具体内容 --&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+   
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="2-字符集与编码">2、 字符集与编码</h3>
+
+<h4 id="1-乱码问题">1. 乱码问题：</h4>
+
+<p>   a. 源文件保存时的编码</p>
+
+<p>   b. 源文件声明<code class="highlighter-rouge">&lt;meta charset="编码方式"&gt;</code></p>
+
+<p>  当上面两者不一致时，就会出现乱码问题</p>
+
+<h4 id="2-html编辑器">2. HTML编辑器</h4>
+
+<p>   a. 记事本</p>
+
+<p>   b. Sublime Text3 —— emmet插件【最常用的】</p>
+
+<p>   c. vs code【也挺火】</p>
+
+<p>   d. WebStorm【涉及工程会用到】</p>
+
+<p>   e. HBuilder【一款由我国开发的前端开发IDE】</p>
+
+<p>   f. ……</p>
+
+<h1 id="四居中">四、居中</h1>
+
+<h3 id="1-容器居中">1. 容器居中</h3>
+
+<p>提前：父级容器有宽高</p>
+
+<p>• 左右居中</p>
+
+<p>margin：0 auto;</p>
+
+<p>auto知识讲解</p>
+
+<h3 id="1-内容居中左右">1. 内容居中左右</h3>
+
+<p>text-align:center;</p>
+
+<h3 id="1-文字上下居中">1. 文字上下居中</h3>
+
+<p>提前：设置容器的高度。如：height: 20px;</p>
+
+<p>适用于：单行文字的，多行的的话不可</p>
+
+<p>line-height: 20px;</p>
+
+                </div>
+               <!--  <div class="toolbox">
+                    <ul>
+                        <li class="toolList"><span class="glyphicon glyphicon-thumbs-up">点赞</span>
+                        </li>
+                        <li class="toolList"><span class="glyphicon glyphicon-star-empty">收藏</span></li>
+                        <li class="toolList"><span class="glyphicon glyphicon-share-alt">分享</span></li>
+                        <li class="toolList"><span class="glyphicon glyphicon-eye-open">浏览量7</span></li>
+                    </ul>
+                </div> -->
+                <!-- <div class="commentbox">
+                    <textarea cols="80" rows="50" placeholder="来说几句吧......" class="mytextarea" id="content"></textarea>
+                    <div class="btn btn-info pull-right" id="comment">评论</div>
+                </div> -->
+                <div class="comment-list"></div>
+                <div class="choosePage">
+                    <ul class="prePage">
+                        
+                        <span class="glyphicon glyphicon-arrow-left"></span><a href="/git/html/css/javascript/jquery/2019/12/29/blog-production.html">上一篇</a>
+                        
+
+                    </ul>
+                    <ul class="nextPage">
+
+                        
+                        <a href="/css/2020/01/02/cssBasic.html">下一篇</a><span class="glyphicon glyphicon-arrow-right"></span>
+                        
+                    </ul>
+                </div>
+            </div>
+            <a class="backTop" href="#"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        </div>
+
+
+        <!-- 菜单小图标 -->
+        <a href="#" id="color-bar">  
+            <div id="bar"></div>
+        </a>
+        <!-- 改变颜色 -->
+        <div class="color">
+            <div class="color-container">
+                <p>Choose your color</p>
+                <ul class="color-list">
+                    <li class="colorBox_1" onclick="choose(1)"></li>
+                    <li class="colorBox_2" onclick="choose(2)"></li>
+                    <li class="colorBox_3" onclick="choose(3)"></li>
+                    <li class="colorBox_4" onclick="choose(4)"></li>
+                    <li class="colorBox_5" onclick="choose(5)"></li>
+                    <li class="colorBox_6" onclick="choose(6)"></li>
+                </ul>
+                <p>Leave your footprints</p>
+            </div><!-- color-container end-->
+        </div><!-- color end-->
+
+    </div>
+    
+    
+
+    <script src="/public/js/jquery-1.11.3.js"></script>
+    <script src="/public/js/jquery.comment.js"></script>
+    <script src="/public/js/content.js"></script>
+
+</body>
+</html>
